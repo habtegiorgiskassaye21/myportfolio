@@ -8,14 +8,23 @@ html{
 
 body{
     background-color: black;
+    padding-top: 100px;
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100px;
-    margin-top: 0;
-    padding-top: 0;
+    background-color: black;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
-    padding-left: 30px;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 .logo-div{
     color: white;
@@ -130,9 +139,40 @@ header{
     margin-top: 3px;
 }
 .left-div{
-    text-align: center;
+    position: relative;
+    width: 350px;
+    height: 350px;
     margin: 40px;
-    padding-right: 100px;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: absolute;
+    z-index: 10;
+    background: rgba(108, 135, 176, 0.411);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 10px;
+    width: 80px;
+    height: 60px;
+    animation: floatImage 5s ease-in-out infinite;
+}
+.card p{
+    z-index: 10;
+    margin: 0;
+    font-family: 14px;
+    color: rgb(107, 110, 108);
+}
+.experience{
+     top:0;
+    left: 260px;
+}
+.projects{
+    top: 250px;
+    right: 270px;
 }
 .image-div{
     width: 350px;
@@ -173,9 +213,15 @@ header{
     100%{
         transform: translateY(10px);
     }
-    }
+}
 
-    .hero-title {
+.experience h3{
+    color: #901ec5;
+}
+.projects h3{
+    color: #0577f2;
+}
+.hero-title {
     font-size: clamp(2rem, 4vw, 4rem); 
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -345,17 +391,17 @@ header{
         right: 10px;
         left: -10%;
         width: 89%;
-        height: auto;
+        height: 600px;
         padding: 15px;
         margin-left: 40px;
         background-color: rgb(63, 93, 132);
         border-radius: 12px;
-        display: none; /* hidden until menu button click */
+        display: none;
         flex-direction: column;
         transition: all 0.5s;
     }
      .menu-div ul{
-        gap: 24px;
+        gap: 30px;
     }
     .menu-div ul li a {
         font-size: 16px;
@@ -366,14 +412,14 @@ header{
 
     }
     .image-div{
-        margin-left: 0;
-        width: 280px;
-        height: 280px;
+        margin-left: 10px;
+        width: 260px;
+        height: 260px;
     }
 
     .image{
-        width: 230px;
-        height: 230px;
+        width: 210px;
+        height: 210px;
     }
     .right-div{
         margin: 20px;
@@ -400,6 +446,14 @@ header{
     }
     .btn{
         width: 70%;
+    }
+    .experience{
+        top: 40px;
+        left: 240px;
+    }
+    .projects{
+        top: 260px;
+        left: 30px;
     }
 }
 
