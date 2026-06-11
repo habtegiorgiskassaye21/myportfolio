@@ -245,6 +245,9 @@ header{
 
 
 
+
+
+
 @media(max-width: 768px){
     .humberger-div{
         display: block;
@@ -307,8 +310,88 @@ header{
 
     }
 }
+/* ===== 720px MOBILE FIX (YOUR SCREEN SIZE) ===== */
+@media (max-width: 720px) {
 
+    header {
+        padding: 10px 15px;
+        height: auto;
+        align-items: center;
+    }
 
+    .logo-div h3 {
+        font-size: 14px;
+    }
+
+    .menu-div {
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 220px;
+        height: auto;
+        padding: 15px;
+        background-color: rgb(63, 93, 132);
+        border-radius: 12px;
+        display: none; /* hidden until menu button click */
+        flex-direction: column;
+    }
+
+    .menu-div ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .menu-div ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+
+    .humberger-div {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .right-div {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .image-div {
+        width: 260px;
+        height: 260px;
+    }
+
+    .image {
+        width: 220px;
+        height: 220px;
+    }
+}
 @media(max-width: 480px){
     header{
         padding-left: 0;
@@ -436,6 +519,3 @@ img{
     animation: floatImage 3s ease-in-out infinite;
 }
 */
-
-
-
